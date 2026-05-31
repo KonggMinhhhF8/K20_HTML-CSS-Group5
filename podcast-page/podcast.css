@@ -19,9 +19,3 @@ ul {
 body {
   font-family: "Inter", sans-serif;
 }
-#menu-toggle:checked ~ .header .nav{
-  right: 0;
-}
-#menu-toggle:checked ~ .header .close{
-  display: block;
-}
