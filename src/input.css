@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,300&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --color-bg-primary: #141414;
+  --color-bg-secondary: #191919;
+  --color-surface: #262626;
+  --color-border: #333333;
+  --color-text-muted: #98989a;
+  --color-accent: #ffd11a;
+}
+
+@theme {
+  --font-kumbh: "Kumbh Sans", sans-serif;
+}

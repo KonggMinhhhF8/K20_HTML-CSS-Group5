@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# Environment
+.env
+
+# Logs
+*.log
+
+# VS Code settings (tuỳ chọn)
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
