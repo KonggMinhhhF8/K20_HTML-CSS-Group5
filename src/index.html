@@ -5,15 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>News Page</title>
     <link href="./output.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/8be3047b8d.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body class="bg-bg-primary">
     <!-- Subscribe -->
     <aside
       aria-label="Newsletter subscription"
-      class="flex justify-between md:justify-center px-6 py-5 bg-bg-primary"
+      class="flex justify-between md:justify-center px-6 py-5"
     >
       <span
-        class="flex justify-center items-center gap-1 text-text-muted text-[12px]"
+        class="flex justify-center items-center gap-1 text-text-muted text-[12px] xl:text-[14px] 2xl:text-[18px]"
       >
         <span>Subscribe to our Newsletter For</span>
         <span class="hidden md:inline">New & latest</span>
@@ -29,64 +33,89 @@
     <!-- Menu -->
     <header class="sticky top-0 z-50">
       <div
-        class="flex items-center justify-between px-4 py-5 md:px-40.5 md:py-6 bg-bg-secondary border border-t-surface border-b-surface border-l-0 border-r-0"
+        class="flex items-center justify-between px-4 py-5 xl:px-20 xl:py-5 2xl:px-40.5 2xl:py-6 bg-bg-secondary border border-t-surface border-b-surface border-l-0 border-r-0"
       >
         <div>
-          <a href="#home" class="flex items-center justify-center text-white">
+          <a
+            href="#home"
+            class="flex items-center justify-center text-text-primary"
+          >
             <img
-              src="./images/Group.png"
-              alt="logo"
+              src="./images/logo.png"
+              alt=""
+              aria-hidden="true"
               class="w-8.75 h-8.75 md:w-12.5 md:h-12.5"
             />
-            <span class="font-bold text-lg ml-2.5">FutureTech</span>
+            <span class="font-bold text-lg ml-2.5 2xl:text-[18px]"
+              >FutureTech</span
+            >
           </a>
         </div>
-        <nav class="text-white hidden md:block" aria-label="Main navigation">
-          <ul class="flex items-center">
-            <li><a href="#" class="px-6 py-3.5 text-text-muted">Home</a></li>
+        <nav
+          class="text-text-primary hidden lg:block"
+          aria-label="Main navigation"
+        >
+          <ul class="flex items-center gap-3 2xl:text-[18px]">
             <li>
               <a
                 href="#"
-                class="px-6 py-3.5 bg-bg-primary border border-border rounded-[14px]"
+                class="px-6 py-3.5 text-text-muted border border-transparent hover:bg-bg-primary hover:border-stroke rounded-[14px] transition-colors"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                aria-current="page"
+                class="px-6 py-3.5 bg-bg-primary border border-stroke rounded-[14px] transition-colors"
                 >News</a
               >
             </li>
             <li>
-              <a href="#" class="px-6 py-3.5 text-text-muted">Podcasts</a>
+              <a
+                href="#"
+                class="px-6 py-3.5 text-text-muted border border-transparent hover:bg-bg-primary hover:border-stroke rounded-[14px] transition-colors"
+                >Podcasts</a
+              >
             </li>
             <li>
-              <a href="#" class="px-6 py-3.5 text-text-muted">Resources</a>
+              <a
+                href="#"
+                class="px-6 py-3.5 text-text-muted border border-transparent hover:bg-bg-primary hover:border-stroke rounded-[14px] transition-colors"
+                >Resources</a
+              >
             </li>
           </ul>
         </nav>
 
         <a
           href="#contact"
-          class="bg-accent px-3.5 py-2.5 rounded-[10px] hidden md:block"
+          class="bg-accent px-3.5 py-2.5 2xl:px-5 2xl:py-3.5 rounded-[10px] hidden lg:block 2xl:text-[18px]"
           >Contact Us</a
         >
-        <img
-          src="./images//menu-mobile.svg"
-          alt="menu-mobile-icon"
-          class="md:hidden"
-        />
+        <button type="button" class="lg:hidden" aria-label="Open menu">
+          <img src="./images/menu-mobile.svg" alt="" aria-hidden="true" />
+        </button>
       </div>
     </header>
     <main>
       <section
-        class="flex flex-col items-start gap-0 px-4 py-10 md:px-40 md:py-24 bg-bg-primary text-white"
+        aria-labelledby="page-title"
+        class="flex flex-col items-start gap-0 px-4 py-10 xl:px-20 xl:pt-20 xl:pb-25 2xl:px-40.5 2xl:pt-32.5 2xl:pb-37.5 text-text-primary"
       >
         <h1
-          class="text-[28px] md:text-[80px] leading-[1.3] font-semibold font-kumbh"
+          id="page-title"
+          class="text-[28px] xl:text-[55px] 2xl:text-[80px] leading-[1.3] font-semibold font-kumbh"
         >
-          Today's Headlines: Stay <span class="md:hidden">Informed</span>
+          Today's Headlines: Stay <span class="xl:hidden">Informed</span>
         </h1>
         <div class="flex items-center">
-          <span class="text-[80px] font-semibold font-kumbh hidden md:block"
+          <span
+            class="xl:text-[55px] 2xl:text-[80px] font-semibold font-kumbh hidden xl:block"
             >Informed</span
           >
           <p
-            class="mt-3.5 md:mt-0 md:ml-20 text-[14px] md:text-[18px] text-text-muted"
+            class="mt-3.5 xl:mt-0 xl:ml-20 text-[14px] xl:text-[16px] 2xl:text-[18px] text-text-muted"
           >
             Explore the latest news from around the world. We bring you
             up-to-the-minute updates on the most significant events, trends, and
@@ -96,10 +125,11 @@
       </section>
       <!-- Card 1 -->
       <article
-        class="flex flex-col md:flex-row justify-center items-center px-4 py-10 md:px-40.5 md:py-20 border border-t-surface border-b-surface border-l-0 border-r-0"
+        aria-labelledby="featured-article-title"
+        class="flex flex-col xl:flex-row justify-center items-center xl:items-stretch px-4 py-10 xl:px-20 xl:py-15 2xl:px-40.5 2xl:py-20 border border-t-surface border-b-surface border-l-0 border-r-0"
       >
         <div
-          class="h-53.25 w-full md:w-128.75 md:h-106.75 rounded-xl overflow-hidden"
+          class="h-53.25 w-full md:h-81.25 xl:h-auto 2xl:w-128.75 2xl:h-106.75 2xl:shrink-0 rounded-xl overflow-hidden"
         >
           <img
             src="./images/Image.png"
@@ -108,13 +138,16 @@
           />
         </div>
 
-        <div class="flex flex-col gap-5 md:gap-10 md:ml-20 mt-7.5 md:mt-0">
+        <div class="flex flex-col gap-5 md:gap-10 xl:my-5.25 xl:ml-10 mt-7.5">
           <div>
-            <h3 class="text-white text-[20px] md:text-[32px] font-semibold">
+            <h2
+              id="featured-article-title"
+              class="text-text-primary text-[20px] xl:text-[24px] 2xl:text-[32px] font-semibold"
+            >
               Global Climate Summit Addresses Urgent Climate Action
-            </h3>
+            </h2>
             <p
-              class="text-text-muted text-[16px] md:text-[20px] mt-1.5 md:mt-10"
+              class="text-text-muted text-[16px] xl:text-[18px] 2xl:text-[20px] mt-1.5 xl:mt-3.5"
             >
               World leaders gathered at the Global Climate Summit to discuss
               urgent climate action, emissions reductions, and renewable energy
@@ -122,28 +155,29 @@
             </p>
           </div>
 
-          <div class="flex text-[14px] md:text-[18px]">
+          <dl class="flex text-[14px] xl:text-[16px] 2xl:text-[18px] m-0">
             <div>
-              <h4 class="text-text-muted">Category</h4>
-              <p class="text-white">Environment</p>
+              <dt class="text-text-muted">Category</dt>
+              <dd class="text-text-primary ml-0">Environment</dd>
             </div>
             <div class="ml-12">
-              <h4 class="text-text-muted">Publication Date</h4>
-              <time datetime="2023-10-10" class="text-white"
-                >October 10, 2023</time
-              >
+              <dt class="text-text-muted">Publication Date</dt>
+              <dd class="text-text-primary ml-0">
+                <time datetime="2023-10-10">October 10, 2023</time>
+              </dd>
             </div>
             <div class="ml-12">
-              <h4 class="text-text-muted">Author</h4>
-              <p class="text-white">Jane Smith</p>
+              <dt class="text-text-muted">Author</dt>
+              <dd class="text-text-primary ml-0">Jane Smith</dd>
             </div>
-          </div>
+          </dl>
 
           <div class="flex items-center justify-between">
             <div class="flex items-center justify-start">
               <button
                 type="button"
-                class="flex border border-surface py-1.5 px-3.5 md:px-4 md:py-2 rounded-[100px]"
+                aria-label="14 thousand likes"
+                class="flex items-center border border-surface py-1.5 px-3.5 md:px-4 md:py-2 rounded-[100px]"
               >
                 <img
                   src="./images/heart.svg"
@@ -151,14 +185,15 @@
                   aria-hidden="true"
                   class="w-5 h-5"
                 />
-                <span class="text-text-muted text-[14px] md:text-[18px] ml-1"
+                <span class="text-text-muted text-[14px] 2xl:text-[18px] ml-1"
                   >14k</span
                 >
               </button>
 
               <button
                 type="button"
-                class="flex ml-2.5 border border-surface py-1.5 px-3.5 md:px-4 md:py-2 rounded-[100px]"
+                aria-label="204 shares"
+                class="flex items-center ml-2.5 border border-surface py-1.5 px-3.5 md:px-4 md:py-2 rounded-[100px]"
               >
                 <img
                   src="./images/paper-plane.svg"
@@ -166,15 +201,15 @@
                   aria-hidden="true"
                   class="w-5 h-5"
                 />
-                <span class="text-text-muted text-[14px] md:text-[18px] ml-1"
+                <span class="text-text-muted text-[14px] 2xl:text-[18px] ml-1"
                   >204</span
                 >
               </button>
             </div>
             <a
               href="#learn-more"
-              class="text-text-muted border border-surface px-5 py-3.5 md:px-6 md:py-4.5 rounded-xl text-[14px] md:text-[18px]"
-              >Learn More</a
+              class="text-text-muted border border-surface px-5 py-3.5 xl:px-5 xl:py-3.5 2xl:px-6 2xl:py-4.5 rounded-xl text-[14px] 2xl:text-[18px]"
+              >Read More</a
             >
           </div>
         </div>
@@ -182,10 +217,14 @@
 
       <!-- Three Card -->
       <section
-        aria-label="Latest news"
-        class="grid grid-cols-1 md:grid-cols-3 px-4 py-10 md:px-40.5 md:py-20 gap-7.5"
+        aria-labelledby="latest-news-title"
+        class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 xl:px-20 xl:py-15 2xl:px-40.5 2xl:py-20 px-4 py-10 gap-7.5"
       >
-        <article class="flex flex-col gap-5">
+        <h2 id="latest-news-title" class="sr-only">Latest news</h2>
+        <article
+          class="flex flex-col gap-5"
+          aria-labelledby="latest-news-1-title"
+        >
           <div class="h-46.25 md:h-55.5 overflow-hidden rounded-xl">
             <img
               src="./images/Image_1.png"
@@ -195,18 +234,20 @@
           </div>
           <div>
             <h3
-              class="font-semibold text-white text-[16px] md:text-[20px] mb-2.5"
+              id="latest-news-1-title"
+              class="font-semibold text-text-primary text-[16px] 2xl:text-[20px] mb-2.5 xl:truncate"
             >
               A Decisive Victory for Progressive Policies
             </h3>
-            <p class="text-[14px] md:text-[20px] text-text-muted">Politics</p>
+            <p class="text-[14px] 2xl:text-[20px] text-text-muted">Politics</p>
           </div>
 
           <div class="flex items-center justify-between text-[18px]">
             <div class="flex items-center justify-start">
               <button
                 type="button"
-                class="flex border border-surface px-3.5 py-1.5 md:px-4 md:py-2 rounded-[100px]"
+                aria-label="2.2 thousand likes"
+                class="flex items-center border border-surface px-3.5 py-1.5 md:px-4 md:py-2 rounded-[100px]"
               >
                 <img
                   src="./images/heart.svg"
@@ -214,14 +255,15 @@
                   aria-hidden="true"
                   class="w-5 h-5"
                 />
-                <span class="text-text-muted text-[14px] md:text-[18px] ml-1"
+                <span class="text-text-muted text-[14px] 2xl:text-[18px] ml-1"
                   >2.2k</span
                 >
               </button>
 
               <button
                 type="button"
-                class="flex ml-2.5 border border-surface px-3.5 py-1.5 md:px-4 md:py-2 rounded-[100px]"
+                aria-label="60 shares"
+                class="flex items-center ml-2.5 border border-surface px-3.5 py-1.5 md:px-4 md:py-2 rounded-[100px]"
               >
                 <img
                   src="./images/paper-plane.svg"
@@ -229,14 +271,15 @@
                   aria-hidden="true"
                   class="w-5 h-5"
                 />
-                <span class="text-text-muted text-[14px] md:text-[18px] ml-1"
+                <span class="text-text-muted text-[14px] 2xl:text-[18px] ml-1"
                   >60</span
                 >
               </button>
             </div>
             <a
               href="#read-more"
-              class="text-text-muted border border-surface px-5 py-3.5 md:px-[77.5px] md:py-4.5 rounded-xl flex items-center text-[14px]"
+              aria-label="Read more about A Decisive Victory for Progressive Policies"
+              class="text-text-muted border border-surface px-5 py-3.5 md:px-5 lg:px-12.5 lg:py-3.5 xl:px-8 xl:py-3.5 2xl:px-9 rounded-xl flex items-center text-[14px] 2xl:text-[18px]"
               >Read More
               <img
                 src="./images/arrow-up-right.svg"
@@ -248,7 +291,10 @@
           </div>
         </article>
 
-        <article class="flex flex-col gap-4 md:gap-5">
+        <article
+          class="flex flex-col gap-4 md:gap-5"
+          aria-labelledby="latest-news-2-title"
+        >
           <div class="h-46.25 md:h-55.5 overflow-hidden rounded-xl">
             <img
               src="./images/Image_2.png"
@@ -258,18 +304,22 @@
           </div>
           <div>
             <h3
-              class="font-semibold text-white text-[16px] md:text-[20px] mb-2.5"
+              id="latest-news-2-title"
+              class="font-semibold text-text-primary text-[16px] 2xl:text-[20px] mb-2.5 xl:truncate"
             >
               Tech Giants Unveil Cutting-Edge AI Innovations
             </h3>
-            <p class="text-[14px] md:text-[20px] text-text-muted">Technology</p>
+            <p class="text-[14px] 2xl:text-[20px] text-text-muted">
+              Technology
+            </p>
           </div>
 
           <div class="flex items-center justify-between text-[18px]">
             <div class="flex items-center justify-start">
               <button
                 type="button"
-                class="flex border border-surface px-3.5 py-1.5 md:px-4 md:py-2 rounded-[100px]"
+                aria-label="6 thousand likes"
+                class="flex items-center border border-surface px-3.5 py-1.5 md:px-4 md:py-2 rounded-[100px]"
               >
                 <img
                   src="./images/heart.svg"
@@ -277,14 +327,15 @@
                   aria-hidden="true"
                   class="w-5 h-5"
                 />
-                <span class="text-text-muted text-[14px] md:text-[18px] ml-1"
+                <span class="text-text-muted text-[14px] 2xl:text-[18px] ml-1"
                   >6k</span
                 >
               </button>
 
               <button
                 type="button"
-                class="flex ml-2.5 border border-surface px-3.5 py-1.5 md:px-4 md:py-2 rounded-[100px]"
+                aria-label="92 shares"
+                class="flex items-center ml-2.5 border border-surface px-3.5 py-1.5 md:px-4 md:py-2 rounded-[100px]"
               >
                 <img
                   src="./images/paper-plane.svg"
@@ -292,14 +343,15 @@
                   aria-hidden="true"
                   class="w-5 h-5"
                 />
-                <span class="text-text-muted text-[14px] md:text-[18px] ml-1"
+                <span class="text-text-muted text-[14px] 2xl:text-[18px] ml-1"
                   >92</span
                 >
               </button>
             </div>
             <a
               href="#read-more"
-              class="text-text-muted border border-surface px-5 py-3.5 md:px-[77.5px] md:py-4.5 rounded-xl flex items-center text-[14px]"
+              aria-label="Read more about Tech Giants Unveil Cutting-Edge AI Innovations"
+              class="text-text-muted border border-surface px-5 py-3.5 md:px-5 lg:px-12.5 lg:py-3.5 xl:px-8 xl:py-3.5 2xl:px-9 rounded-xl flex items-center text-[14px] 2xl:text-[18px]"
               >Read More
               <img
                 src="./images/arrow-up-right.svg"
@@ -311,7 +363,10 @@
           </div>
         </article>
 
-        <article class="flex flex-col gap-5">
+        <article
+          class="flex flex-col gap-5"
+          aria-labelledby="latest-news-3-title"
+        >
           <div class="h-46.25 md:h-55.5 overflow-hidden rounded-xl">
             <img
               src="./images/Image_3.png"
@@ -321,18 +376,20 @@
           </div>
           <div>
             <h3
-              class="font-semibold text-white text-[16px] md:text-[20px] mb-2.5"
+              id="latest-news-3-title"
+              class="font-semibold text-text-primary text-[16px] 2xl:text-[20px] mb-2.5"
             >
               COVID-19 Variants
             </h3>
-            <p class="text-[14px] md:text-[20px] text-text-muted">Health</p>
+            <p class="text-[14px] 2xl:text-[20px] text-text-muted">Health</p>
           </div>
 
           <div class="flex items-center justify-between text-[18px]">
             <div class="flex items-center justify-start">
               <button
                 type="button"
-                class="flex border border-surface px-3.5 py-1.5 md:px-4 md:py-2 rounded-[100px]"
+                aria-label="10 thousand likes"
+                class="flex items-center border border-surface px-3.5 py-1.5 md:px-4 md:py-2 rounded-[100px]"
               >
                 <img
                   src="./images/heart.svg"
@@ -340,14 +397,15 @@
                   aria-hidden="true"
                   class="w-5 h-5"
                 />
-                <span class="text-text-muted text-[14px] md:text-[18px] ml-1"
+                <span class="text-text-muted text-[14px] 2xl:text-[18px] ml-1"
                   >10k</span
                 >
               </button>
 
               <button
                 type="button"
-                class="flex ml-2.5 border border-surface px-3.5 py-1.5 md:px-4 md:py-2 rounded-[100px]"
+                aria-label="124 shares"
+                class="flex items-center ml-2.5 border border-surface px-3.5 py-1.5 md:px-4 md:py-2 rounded-[100px]"
               >
                 <img
                   src="./images/paper-plane.svg"
@@ -355,14 +413,15 @@
                   aria-hidden="true"
                   class="w-5 h-5"
                 />
-                <span class="text-text-muted text-[14px] md:text-[18px] ml-1"
+                <span class="text-text-muted text-[14px] 2xl:text-[18px] ml-1"
                   >124</span
                 >
               </button>
             </div>
             <a
               href="#read-more"
-              class="text-text-muted border border-surface px-5 py-3.5 md:px-[77.5px] md:py-4.5 rounded-xl flex items-center text-[14px]"
+              aria-label="Read more about COVID-19 Variants"
+              class="text-text-muted border border-surface px-5 py-3.5 md:px-5 lg:px-12.5 lg:py-3.5 xl:px-8 xl:py-3.5 2xl:px-9 rounded-xl flex items-center text-[14px] 2xl:text-[18px]"
               >Read More
               <img
                 src="./images/arrow-up-right.svg"
@@ -374,33 +433,906 @@
           </div>
         </article>
       </section>
-
+      <!-- Discover the world Section -->
       <section
-        class="px-4 py-10 md:py-30 md:px-40.5 flex flex-col border-t border-b border-t-surface border-b-surface gap-7.5 bg-bg-secondary"
+        aria-labelledby="discover-headlines-title"
+        class="px-4 py-10 xl:px-20 xl:py-20 2xl:py-30 2xl:px-40.5 flex flex-col xl:flex-row xl:justify-between xl:items-center border-t border-b border-t-surface border-b-surface bg-bg-secondary"
       >
         <div>
           <p
-            class="px-2 py-1 w-fit bg-border rounded-sm text-[14px] text-white"
+            class="px-2 py-1 2xl:px-2.5 2xl:py-2 w-fit bg-stroke rounded-sm text-[14px] xl:text-[16px] 2xl:text-[20px] text-text-primary"
           >
             Welcome to Our News Hub
           </p>
-          <h2 class="text-[28px] mt-2.5 text-white font-medium font-kumbh">
+          <h2
+            id="discover-headlines-title"
+            class="text-[28px] xl:text-[44px] mt-2.5 2xl:mt-4 2xl:text-[58px] text-text-primary font-medium font-kumbh"
+          >
             Discover the World of Headlines
           </h2>
         </div>
         <a
           href="#read-more"
-          class="text-text-muted border border-surface px-5 py-3.5 md:px-[77.5px] md:py-4.5 rounded-xl flex items-center justify-center bg-bg-primary"
+          class="text-text-muted border border-surface text-[14px] px-5 py-3.5 mt-7.5 md:px-[77.5px] md:py-4.5 xl:px-5 xl:py-3.5 xl:mt-0 xl:w-fit xl:h-fit 2xl:text-[18px] 2xl:px-6 2xl:py-4.5 rounded-xl flex items-center justify-center bg-bg-primary"
           >View All News
           <img
             src="./images/arrow-up-right.svg"
             alt=""
             aria-hidden="true"
-            class="ml-1 md:ml-2.5 w-5 h-5"
+            class="ml-1 w-5 h-5"
           />
         </a>
       </section>
+      <!-- Category bar -->
+      <section
+        aria-label="News categories"
+        class="px-4 py-5 xl:px-20 xl:py-10 2xl:px-40.5 2xl:py-12.5"
+      >
+        <div
+          class="flex overflow-x-auto scrollbar-hide gap-4 whitespace-nowrap text-[14px] 2xl:text-[18px]"
+        >
+          <button
+            type="button"
+            aria-pressed="true"
+            class="w-38 h-14.25 xl:w-50.5 xl:h-17.25 shrink-0 border border-surface text-text-primary bg-bg-secondary rounded-[7px]"
+          >
+            All
+          </button>
+          <button
+            type="button"
+            aria-pressed="false"
+            class="w-38 h-14.25 xl:w-50.5 xl:h-17.25 shrink-0 border border-surface text-text-muted rounded-[7px]"
+          >
+            Technology
+          </button>
+          <button
+            type="button"
+            aria-pressed="false"
+            class="w-38 h-14.25 xl:w-50.5 xl:h-17.25 shrink-0 border border-surface text-text-muted rounded-[7px]"
+          >
+            Politics
+          </button>
+          <button
+            type="button"
+            aria-pressed="false"
+            class="w-38 h-14.25 xl:w-50.5 xl:h-17.25 shrink-0 border border-surface text-text-muted rounded-[7px]"
+          >
+            Health
+          </button>
+          <button
+            type="button"
+            aria-pressed="false"
+            class="w-38 h-14.25 xl:w-50.5 xl:h-17.25 shrink-0 border border-surface text-text-muted rounded-[7px]"
+          >
+            Environment
+          </button>
+          <button
+            type="button"
+            aria-pressed="false"
+            class="w-38 h-14.25 xl:w-50.5 xl:h-17.25 shrink-0 border border-surface text-text-muted rounded-[7px]"
+          >
+            Sports
+          </button>
+        </div>
+      </section>
+
+      <!-- All articles -->
+      <section aria-labelledby="all-articles-title">
+        <h2 id="all-articles-title" class="sr-only">All articles</h2>
+        <!-- Card 1 -->
+        <article
+          class="border-t border-surface py-10 px-4 grid grid-cols-[1fr_auto] xl:grid-cols-[305px_1fr_auto] xl:px-20 xl:py-15 2xl:px-[162px] 2xl:py-20"
+          aria-labelledby="article-1-title"
+        >
+          <div class="flex items-center gap-2 xl:order-1 xl:self-start">
+            <img
+              src="./images/john.png"
+              alt="John Techson"
+              class="h-15 w-15 2xl:h-20 2xl:w-20 rounded-full object-cover"
+            />
+
+            <div>
+              <p
+                class="text-[18px] 2xl:text-[20px] font-semibold text-text-primary"
+              >
+                John Techson
+              </p>
+              <p
+                class="text-text-muted text-[14px] xl:text-[16px] 2xl:text-[18px]"
+              >
+                Technology
+              </p>
+            </div>
+          </div>
+
+          <a
+            href="#"
+            class="self-center flex items-center gap-1 w-fit h-fit rounded-xl border border-surface px-5 py-3.5 text-text-muted text-[14px] 2xl:text-[18px] 2xl:px-6 2xl:py-4.5 xl:order-3"
+            aria-label="Read more about Tech Giants Announce New Product Line"
+          >
+            Read More
+            <img
+              src="./images/arrow-up-right.svg"
+              alt=""
+              aria-hidden="true"
+              class="w-5 h-5"
+            />
+          </a>
+          <div class="col-span-2 xl:col-span-1 xl:order-2">
+            <div class="mt-7.5 xl:mt-0 xl:pr-10">
+              <time
+                datetime="2023-10-15"
+                class="block text-text-muted text-[16px] xl:text-[18px] 2xl:text-[20px] font-semibold"
+              >
+                October 15, 2023
+              </time>
+
+              <h3
+                id="article-1-title"
+                class="mt-5 text-[18px] xl:text-[22px] 2xl:text-[26px] font-semibold text-text-primary"
+              >
+                Tech Giants Announce New Product Line
+              </h3>
+
+              <p
+                class="mt-1 text-text-muted text-[14px] xl:text-[16px] 2xl:text-[18px]"
+              >
+                Explore the latest innovations from tech industry leaders,
+                unveiling new products that promise to transform the digital
+                landscape
+              </p>
+            </div>
+
+            <footer class="mt-5 flex items-center gap-3">
+              <button
+                type="button"
+                class="flex items-center gap-0.5 rounded-full border border-surface px-4 py-2 text-text-muted text-[14px] 2xl:text-[18px]"
+                aria-label="24.5 thousand likes"
+              >
+                <i class="fa-solid fa-heart text-like" aria-hidden="true"></i>
+                <span aria-hidden="true">24.5k</span>
+              </button>
+
+              <button
+                type="button"
+                class="flex items-center gap-0.5 rounded-full border border-surface px-4 py-2 text-text-muted text-[14px] 2xl:text-[18px]"
+                aria-label="50 comments"
+              >
+                <i class="fa-regular fa-comment" aria-hidden="true"></i>
+                <span aria-hidden="true">50</span>
+              </button>
+
+              <button
+                type="button"
+                class="flex items-center gap-0.5 rounded-full border border-surface px-4 py-2 text-text-muted text-[14px] 2xl:text-[18px]"
+                aria-label="20 shares"
+              >
+                <i class="fa-regular fa-paper-plane" aria-hidden="true"></i>
+                <span aria-hidden="true">20</span>
+              </button>
+            </footer>
+          </div>
+        </article>
+        <!-- Card 2 -->
+        <article
+          class="border-t border-surface py-10 px-4 grid grid-cols-[1fr_auto] xl:grid-cols-[305px_1fr_auto] xl:px-20 xl:py-15 2xl:px-[162px] 2xl:py-20"
+          aria-labelledby="article-2-title"
+        >
+          <div class="flex items-center gap-2 xl:order-1 xl:self-start">
+            <img
+              src="./images/sarah.png"
+              alt="Sarah Ethicist"
+              class="h-15 w-15 2xl:h-20 2xl:w-20 rounded-full object-cover"
+            />
+
+            <div>
+              <p
+                class="text-[18px] 2xl:text-[20px] font-semibold text-text-primary"
+              >
+                Sarah Ethicist
+              </p>
+              <p
+                class="text-text-muted text-[14px] xl:text-[16px] 2xl:text-[18px]"
+              >
+                Technology
+              </p>
+            </div>
+          </div>
+
+          <a
+            href="#"
+            class="self-center flex items-center gap-1 w-fit h-fit rounded-xl border border-surface px-5 py-3.5 text-text-muted text-[14px] 2xl:text-[18px] 2xl:px-6 2xl:py-4.5 xl:order-3"
+            aria-label="Read more about The Future of Autonomous Vehicles"
+          >
+            Read More
+            <img
+              src="./images/arrow-up-right.svg"
+              alt=""
+              aria-hidden="true"
+              class="w-5 h-5"
+            />
+          </a>
+
+          <div class="col-span-2 xl:col-span-1 xl:order-2">
+            <div class="mt-7.5 xl:mt-0 xl:pr-10">
+              <time
+                datetime="2023-10-11"
+                class="block text-text-muted text-[16px] xl:text-[18px] 2xl:text-[20px] font-semibold"
+              >
+                October 11, 2023
+              </time>
+
+              <h3
+                id="article-2-title"
+                class="mt-5 text-[18px] xl:text-[22px] 2xl:text-[26px] font-semibold text-text-primary"
+              >
+                The Future of Autonomous Vehicles
+              </h3>
+
+              <p
+                class="mt-1 text-text-muted text-[14px] xl:text-[16px] 2xl:text-[18px]"
+              >
+                An in-depth analysis of the rapid advancements in autonomous
+                vehicle technology and their impact on transportation.
+              </p>
+            </div>
+
+            <footer class="mt-5 flex items-center gap-3">
+              <button
+                type="button"
+                class="flex items-center gap-0.5 rounded-full border border-surface px-4 py-2 text-text-muted text-[14px] 2xl:text-[18px]"
+                aria-label="32 thousand likes"
+              >
+                <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                <span aria-hidden="true">32k</span>
+              </button>
+
+              <button
+                type="button"
+                class="flex items-center gap-0.5 rounded-full border border-surface px-4 py-2 text-text-muted text-[14px] 2xl:text-[18px]"
+                aria-label="72 comments"
+              >
+                <i class="fa-regular fa-comment" aria-hidden="true"></i>
+                <span aria-hidden="true">72</span>
+              </button>
+
+              <button
+                type="button"
+                class="flex items-center gap-0.5 rounded-full border border-surface px-4 py-2 text-text-muted text-[14px] 2xl:text-[18px]"
+                aria-label="18 shares"
+              >
+                <i class="fa-regular fa-paper-plane" aria-hidden="true"></i>
+                <span aria-hidden="true">18</span>
+              </button>
+            </footer>
+          </div>
+        </article>
+        <!-- Card 3 -->
+        <article
+          class="border-t border-surface py-10 px-4 grid grid-cols-[1fr_auto] xl:grid-cols-[305px_1fr_auto] xl:px-20 xl:py-15 2xl:px-[162px] 2xl:py-20"
+          aria-labelledby="article-3-title"
+        >
+          <div class="flex items-center gap-2 xl:order-1 xl:self-start">
+            <img
+              src="./images/astro.png"
+              alt="Astronomer X"
+              class="h-15 w-15 2xl:h-20 2xl:w-20 rounded-full object-cover"
+            />
+
+            <div>
+              <p
+                class="text-[18px] 2xl:text-[20px] font-semibold text-text-primary"
+              >
+                Astronomer X
+              </p>
+              <p
+                class="text-text-muted text-[14px] xl:text-[16px] 2xl:text-[18px]"
+              >
+                Technology
+              </p>
+            </div>
+          </div>
+
+          <a
+            href="#"
+            class="self-center flex items-center gap-1 w-fit h-fit rounded-xl border border-surface px-5 py-3.5 text-text-muted text-[14px] 2xl:text-[18px] 2xl:px-6 2xl:py-4.5 xl:order-3"
+            aria-label="Read more about Tech Startups Secure Record Funding"
+          >
+            Read More
+            <img
+              src="./images/arrow-up-right.svg"
+              alt=""
+              aria-hidden="true"
+              class="w-5 h-5"
+            />
+          </a>
+
+          <div class="col-span-2 xl:col-span-1 xl:order-2">
+            <div class="mt-7.5 xl:mt-0 xl:pr-10">
+              <time
+                datetime="2023-12-10"
+                class="block text-text-muted text-[16px] xl:text-[18px] 2xl:text-[20px] font-semibold"
+              >
+                December 10, 2023
+              </time>
+
+              <h3
+                id="article-3-title"
+                class="mt-5 text-[18px] xl:text-[22px] 2xl:text-[26px] font-semibold text-text-primary"
+              >
+                Tech Startups Secure Record Funding
+              </h3>
+
+              <p
+                class="mt-1 text-text-muted text-[14px] xl:text-[16px] 2xl:text-[18px]"
+              >
+                An overview of the recent surge in funding for tech startups,
+                shaping the entrepreneurial landscape.
+              </p>
+            </div>
+
+            <footer class="mt-5 flex items-center gap-3">
+              <button
+                type="button"
+                class="flex items-center gap-0.5 rounded-full border border-surface px-4 py-2 text-text-muted text-[14px] 2xl:text-[18px]"
+                aria-label="20 thousand likes"
+              >
+                <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                <span aria-hidden="true">20k</span>
+              </button>
+
+              <button
+                type="button"
+                class="flex items-center gap-0.5 rounded-full border border-surface px-4 py-2 text-text-muted text-[14px] 2xl:text-[18px]"
+                aria-label="31 comments"
+              >
+                <i class="fa-regular fa-comment" aria-hidden="true"></i>
+                <span aria-hidden="true">31</span>
+              </button>
+
+              <button
+                type="button"
+                class="flex items-center gap-0.5 rounded-full border border-surface px-4 py-2 text-text-muted text-[14px] 2xl:text-[18px]"
+                aria-label="12 shares"
+              >
+                <i class="fa-regular fa-paper-plane" aria-hidden="true"></i>
+                <span aria-hidden="true">12</span>
+              </button>
+            </footer>
+          </div>
+        </article>
+      </section>
+
+      <!-- Featured Videos -->
+      <section
+        aria-labelledby="featured-videos-title"
+        class="px-4 py-10 xl:px-20 xl:py-20 2xl:py-30 2xl:px-40.5 flex flex-col xl:flex-row xl:justify-between xl:items-center border-t border-b border-t-surface border-b-surface gap-7.5 bg-bg-secondary"
+      >
+        <div>
+          <p
+            class="px-2 py-1 w-fit bg-stroke rounded-sm text-[14px] 2xl:text-[20px] text-text-primary"
+          >
+            Featured Videos
+          </p>
+          <h2
+            id="featured-videos-title"
+            class="text-[28px] 2xl:text-[58px] mt-2.5 text-text-primary font-medium font-kumbh"
+          >
+            Visual Insights for the Modern Viewer
+          </h2>
+        </div>
+        <a
+          href="#read-more"
+          class="text-text-muted border border-surface px-5 py-3.5 md:px-[77.5px] md:py-4.5 xl:px-5 xl:py-3.5 xl:w-fit xl:h-fit xl:text-[14px] 2xl:text-[18px] 2xl:px-6 2xl:py-4.5 rounded-xl flex items-center justify-center bg-bg-primary"
+          >View All
+          <img
+            src="./images/arrow-up-right.svg"
+            alt=""
+            aria-hidden="true"
+            class="ml-1 w-5 h-5"
+          />
+        </a>
+      </section>
+      <!-- Videos Card -->
+
+      <section
+        aria-label="Featured video list"
+        class="grid grid-cols-1 lg:grid-cols-2"
+      >
+        <!-- Video card 1 -->
+        <article
+          class="lg:order-3 px-4 py-10 xl:px-20 xl:pr-12.5 xl:py-15 2xl:pl-40.5 2xl:py-20 2xl:pr-20 flex flex-col gap-5 lg:border-r lg:border-surface"
+          aria-labelledby="video-1-title"
+        >
+          <div
+            class="relative w-full h-52.5 xl:h-82.75 overflow-hidden rounded-[10px]"
+          >
+            <img
+              src="./images/video_1.png"
+              alt=""
+              class="block w-full h-full object-cover mask-[linear-gradient(to_bottom,black_0%,black_84%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_0%,black_84%,transparent_100%)]"
+            />
+
+            <!-- Nút Play -->
+            <i
+              aria-hidden="true"
+              class="fa-solid fa-circle-play absolute bottom-7.5 left-7.5 text-[50px] text-text-primary z-20"
+            ></i>
+
+            <!-- Thời lượng video -->
+            <div
+              class="absolute bottom-5 right-4 text-text-primary/80 text-[14px] font-light select-none z-20"
+            >
+              2:30 min
+            </div>
+            <div
+              class="absolute inset-0 pointer-events-none bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,0)_52%,rgba(20,20,20,0.22)_80%,#141414_100%)]"
+            ></div>
+          </div>
+
+          <div>
+            <h3
+              id="video-1-title"
+              class="text-[18px] 2xl:text-[24px] font-semibold text-text-primary"
+            >
+              Breaking the Silence: Mental Health Awareness in the Workplace
+            </h3>
+            <p class="text-[14px] 2xl:text-[18px] text-text-muted mt-1">
+              An exploration of the importance of mental health awareness and
+              the initiatives reshaping workplaces for employee well-being.
+            </p>
+          </div>
+        </article>
+        <hr class="mx-4 border-t border-surface lg:hidden" aria-hidden="true" />
+        <!-- Video card 2 -->
+        <article
+          class="lg:order-4 px-4 py-10 xl:pr-20 xl:pl-12.5 xl:py-15 2xl:pl-20 2xl:py-20 2xl:pr-40.5 flex flex-col gap-5"
+          aria-labelledby="video-2-title"
+        >
+          <div
+            class="relative w-full h-52.5 xl:h-82.75 overflow-hidden rounded-[10px]"
+          >
+            <img
+              src="./images/video_2.png"
+              alt=""
+              class="block w-full h-full object-cover mask-[linear-gradient(to_bottom,black_0%,black_84%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_0%,black_84%,transparent_100%)]"
+            />
+
+            <!-- Nút Play -->
+            <i
+              aria-hidden="true"
+              class="fa-solid fa-circle-play absolute bottom-7.5 left-7.5 text-[50px] text-text-primary z-20"
+            ></i>
+
+            <!-- Thời lượng video -->
+            <div
+              class="absolute bottom-5 right-4 text-text-primary/80 text-[14px] font-light select-none z-20"
+            >
+              2:30 min
+            </div>
+            <div
+              class="absolute inset-0 pointer-events-none bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,0)_52%,rgba(20,20,20,0.22)_80%,#141414_100%)]"
+            ></div>
+          </div>
+
+          <div>
+            <h3
+              id="video-2-title"
+              class="text-[18px] 2xl:text-[24px] font-semibold text-text-primary"
+            >
+              Revolutionizing Investment Strategies
+            </h3>
+            <p class="text-[14px] 2xl:text-[18px] text-text-muted mt-1">
+              An in-depth look at global efforts to conserve biodiversity and
+              safeguard endangered species from extinction.
+            </p>
+          </div>
+        </article>
+
+        <hr class="mx-4 border-t border-surface lg:hidden" aria-hidden="true" />
+
+        <!-- Video card 3 -->
+        <article
+          class="lg:order-1 px-4 py-10 xl:pl-20 xl:pr-12.5 xl:py-15 2xl:pl-40.5 2xl:py-20 2xl:pr-20 flex flex-col gap-5 lg:border-r lg:border-b lg:border-surface"
+          aria-labelledby="video-3-title"
+        >
+          <div
+            class="relative overflow-hidden w-full h-52.5 xl:h-82.75 rounded-[10px]"
+          >
+            <img
+              src="./images/video_3.png"
+              alt=""
+              class="block w-full h-full object-cover mask-[linear-gradient(to_bottom,black_0%,black_84%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_0%,black_84%,transparent_100%)]"
+            />
+
+            <!-- Nút Play -->
+            <i
+              aria-hidden="true"
+              class="fa-solid fa-circle-play absolute bottom-7.5 left-7.5 text-[50px] text-text-primary z-20"
+            ></i>
+
+            <!-- Thời lượng video -->
+            <div
+              class="absolute bottom-5 right-4 text-text-primary/80 text-[14px] font-light select-none z-20"
+            >
+              2:30 min
+            </div>
+            <div
+              class="absolute inset-0 pointer-events-none bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,0)_52%,rgba(20,20,20,0.22)_80%,#141414_100%)]"
+            ></div>
+          </div>
+
+          <div>
+            <h3
+              id="video-3-title"
+              class="text-[18px] 2xl:text-[24px] font-semibold text-text-primary"
+            >
+              Mars Exploration: Unveiling Alien Landscapes
+            </h3>
+            <p class="text-[14px] 2xl:text-[18px] text-text-muted mt-1">
+              Embark on a journey through the Red Planet's breathtaking
+              landscapes and uncover the mysteries of Mars.
+            </p>
+          </div>
+        </article>
+
+        <hr class="mx-4 border-t border-surface lg:hidden" aria-hidden="true" />
+
+        <!-- Video card 4 -->
+        <article
+          class="lg:order-2 px-4 py-10 xl:pr-20 xl:pl-12.5 xl:py-15 2xl:pl-20 2xl:py-20 2xl:pr-40.5 flex flex-col gap-5 lg:border-b lg:border-surface"
+          aria-labelledby="video-4-title"
+        >
+          <div
+            class="relative w-full h-52.5 xl:h-82.75 overflow-hidden rounded-[10px]"
+          >
+            <img
+              src="./images/video_4.png"
+              alt=""
+              class="block w-full h-full object-cover mask-[linear-gradient(to_bottom,black_0%,black_84%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_0%,black_84%,transparent_100%)]"
+            />
+
+            <!-- Nút Play -->
+            <i
+              aria-hidden="true"
+              class="fa-solid fa-circle-play absolute bottom-7.5 left-7.5 text-[50px] text-text-primary z-20"
+            ></i>
+
+            <!-- Thời lượng video -->
+            <div
+              class="absolute bottom-5 right-4 text-text-primary/80 text-[14px] font-light select-none z-20"
+            >
+              2:30 min
+            </div>
+            <div
+              class="absolute inset-0 pointer-events-none bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,0)_52%,rgba(20,20,20,0.22)_80%,#141414_100%)]"
+            ></div>
+          </div>
+
+          <div>
+            <h3
+              id="video-4-title"
+              class="text-[18px] 2xl:text-[24px] font-semibold text-text-primary"
+            >
+              Blockchain Explained: A Revolution in Finance
+            </h3>
+            <p class="text-[14px] 2xl:text-[18px] text-text-muted mt-1">
+              Delve into the world of blockchain technology and its
+              transformative impact on the financial industry.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <!-- Learn, Connect, and Innovate -->
+      <section
+        aria-labelledby="future-tech-revolution-title"
+        class="px-4 py-10 xl:px-20 xl:py-20 2xl:px-40.5 2xl:py-30 flex flex-col gap-10 bg-bg-secondary border-t border-b border-t-surface border-b-surface"
+      >
+        <div
+          class="grid grid-cols-[auto_1fr] items-center gap-x-5 gap-y-5 lg:grid-cols-[120px_1fr] lg:gap-x-10 lg:gap-y-4"
+        >
+          <!-- Logo -->
+          <img
+            src="./images/logo.svg"
+            alt="FutureTech logo"
+            class="w-15 h-15 lg:w-24 lg:h-24 2xl:w-37.5 2xl:h-37.5 lg:row-span-3"
+          />
+
+          <!-- Badge -->
+          <p
+            class="justify-self-start rounded-sm bg-stroke px-2 py-1 text-[14px] text-text-primary lg:text-[16px] 2xl:text-[20px] 2xl:px-2.5 2xl:py-1.5"
+          >
+            Learn, Connect, and Innovate
+          </p>
+
+          <!-- Title -->
+          <h2
+            id="future-tech-revolution-title"
+            class="col-span-2 font-kumbh text-[28px] font-medium leading-tight text-text-primary lg:col-span-1 lg:text-[40px] lg:leading-[1.2] 2xl:text-[58px]"
+          >
+            Be Part of the Future Tech Revolution
+          </h2>
+
+          <!-- Description -->
+          <p
+            class="col-span-2 text-[14px] leading-[1.6] text-text-muted lg:col-span-1 lg:text-[16px] 2xl:text-[18px]"
+          >
+            Immerse yourself in the world of future technology. Explore our
+            comprehensive resources, connect with fellow tech enthusiasts, and
+            drive innovation in the industry. Join a dynamic community of
+            forward-thinkers.
+          </p>
+        </div>
+
+        <!--3 Card Grid-->
+        <div
+          class="grid grid-cols-1 gap-2.5 md:grid-cols-3 p-2.5 rounded-[10px] border border-surface bg-bg-primary"
+        >
+          <!-- Card 1 -->
+          <article
+            aria-labelledby="resource-access-title"
+            class="p-6 2xl:p-10 bg-surface-card rounded-[10px] border border-surface flex flex-col gap-5"
+          >
+            <div class="flex items-center justify-between">
+              <h3
+                id="resource-access-title"
+                class="text-text-primary text-[16px] 2xl:text-[22px] font-semibold"
+              >
+                Resource Access
+              </h3>
+              <img
+                src="./images/Button.svg"
+                alt=""
+                aria-hidden="true"
+                class="w-10 h-10 2xl:w-13 2xl:h-13"
+              />
+            </div>
+            <div>
+              <p class="text-text-muted text-[14px] 2xl:text-[18px]">
+                Visitors can access a wide range of resources, including ebooks,
+                whitepapers, reports.
+              </p>
+            </div>
+          </article>
+
+          <!-- card 2 -->
+          <article
+            aria-labelledby="community-forum-title"
+            class="p-6 2xl:p-10 bg-surface-card rounded-[10px] border border-surface flex flex-col gap-5"
+          >
+            <div class="flex items-center justify-between">
+              <h3
+                id="community-forum-title"
+                class="text-text-primary text-[16px] 2xl:text-[22px] font-semibold"
+              >
+                Community Forum
+              </h3>
+              <img
+                src="./images/Button.svg"
+                alt=""
+                aria-hidden="true"
+                class="w-10 h-10 2xl:w-13 2xl:h-13"
+              />
+            </div>
+            <div>
+              <p class="text-text-muted text-[14px] 2xl:text-[18px]">
+                Join our active community forum to discuss industry trends and
+                collaborate with peers.
+              </p>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article
+            aria-labelledby="tech-events-title"
+            class="p-6 2xl:p-10 bg-surface-card rounded-[10px] border border-surface flex flex-col gap-5"
+          >
+            <div class="flex items-center justify-between">
+              <h3
+                id="tech-events-title"
+                class="text-text-primary text-[16px] 2xl:text-[22px] font-semibold"
+              >
+                Tech Events
+              </h3>
+              <img
+                src="./images/Button.svg"
+                alt=""
+                aria-hidden="true"
+                class="w-10 h-10 2xl:w-13 2xl:h-13"
+              />
+            </div>
+            <div>
+              <p class="text-text-muted text-[14px] 2xl:text-[18px]">
+                Stay updated on upcoming tech events, webinars and conferences
+                to enhance your knowledge.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
     </main>
-    <footer></footer>
+    <footer>
+      <!-- Navigation Bar -->
+      <nav
+        aria-label="Footer navigation"
+        class="grid grid-cols-2 lg:grid-cols-5 gap-5 px-4 py-10 xl:px-20 xl:py-15 2xl:px-40.5 2xl:py-20"
+      >
+        <section class="order-1 flex flex-col gap-4 2xl:gap-8">
+          <h3 class="text-text-primary text-[16px] 2xl:text-[20px] font-medium">
+            Home
+          </h3>
+          <ul
+            class="text-text-muted text-[14px] 2xl:text-[18px] flex flex-col gap-2 xl:gap-3 2xl:gap-4.5"
+          >
+            <li><a href="#link">Features</a></li>
+            <li><a href="#link">Blogs</a></li>
+            <li>
+              <a href="#link">Resources</a>
+              <span
+                class="inline-flex ml-2 rounded-lg bg-[radial-gradient(circle_at_100%_0%,#FFD119_0%,#FFD119_6%,#6b5b1a_18%,#262626_42%,#262626_100%)] p-px"
+              >
+                <span
+                  class="rounded-[7px] bg-bg-secondary px-2.5 py-0.5 2xl:px-3 2xl:py-1 text-text-primary text-[12px]"
+                >
+                  New
+                </span>
+              </span>
+            </li>
+            <li><a href="#link">Testimonials</a></li>
+            <li><a href="#link">Contact Us</a></li>
+            <li><a href="#link">Newsletter</a></li>
+          </ul>
+        </section>
+        <section class="order-2 flex flex-col gap-4 2xl:gap-8">
+          <h3 class="text-text-primary text-[16px] 2xl:text-[20px] font-medium">
+            News
+          </h3>
+          <ul
+            class="text-text-muted text-[14px] 2xl:text-[18px] flex flex-col gap-2 xl:gap-3 2xl:gap-4.5"
+          >
+            <li><a href="#link">Trending Stories</a></li>
+            <li><a href="#link">Featured Videos</a></li>
+            <li><a href="#link">Technology</a></li>
+            <li><a href="#link">Health</a></li>
+            <li><a href="#link">Politics</a></li>
+            <li><a href="#link">Environment</a></li>
+          </ul>
+        </section>
+        <section class="order-4 md:order-3 flex flex-col gap-4 2xl:gap-8">
+          <h3 class="text-text-primary text-[16px] 2xl:text-[20px] font-medium">
+            Blogs
+          </h3>
+          <ul
+            class="text-text-muted text-[14px] 2xl:text-[18px] flex flex-col gap-2 xl:gap-3 2xl:gap-4.5"
+          >
+            <li><a href="#link">Quantum Computing</a></li>
+            <li><a href="#link">AI Ethics</a></li>
+            <li><a href="#link">Space Exploration</a></li>
+            <li>
+              <a href="#link">Biotechnology</a>
+              <span
+                class="inline-flex ml-2 rounded-lg bg-[radial-gradient(circle_at_100%_0%,#FFD119_0%,#FFD119_6%,#6b5b1a_18%,#262626_42%,#262626_100%)] p-px"
+              >
+                <span
+                  class="rounded-[7px] bg-bg-secondary px-2.5 py-0.5 2xl:px-3 2xl:py-1 text-text-primary text-[12px]"
+                >
+                  New
+                </span>
+              </span>
+            </li>
+            <li><a href="#link">Renewable Energy</a></li>
+            <li><a href="#link">Biohacking</a></li>
+          </ul>
+        </section>
+        <section class="order-3 md:order-4 flex flex-col gap-4 2xl:gap-8">
+          <h3 class="text-text-primary text-[16px] 2xl:text-[20px] font-medium">
+            Podcasts
+          </h3>
+          <ul
+            class="text-text-muted text-[14px] 2xl:text-[18px] flex flex-col gap-2 xl:gap-3 2xl:gap-4.5"
+          >
+            <li><a href="#link">AI Revolution</a></li>
+            <li>
+              <a href="#link">AI Revolution</a>
+              <span
+                class="inline-flex ml-2 rounded-lg bg-[radial-gradient(circle_at_100%_0%,#FFD119_0%,#FFD119_6%,#6b5b1a_18%,#262626_42%,#262626_100%)] p-px"
+              >
+                <span
+                  class="rounded-[7px] bg-bg-secondary px-2.5 py-0.5 2xl:px-3 2xl:py-1 text-text-primary text-[12px]"
+                >
+                  New
+                </span>
+              </span>
+            </li>
+            <li><a href="#link">TechTalk AI</a></li>
+            <li><a href="#link">AI Conversations</a></li>
+          </ul>
+        </section>
+        <section
+          class="col-span-2 md:col-span-1 order-5 flex flex-col gap-4 2xl:gap-8"
+        >
+          <h3 class="text-text-primary text-[16px] 2xl:text-[20px] font-medium">
+            Resources
+          </h3>
+          <div class="flex flex-wrap gap-3 lg:flex-col 2xl:gap-4.5">
+            <a
+              class="flex items-center text-[14px] 2xl:text-[18px] text-text-muted px-3.5 py-2 2xl:px-4 2xl:py-2.5 border border-surface w-fit rounded-md"
+              href="#whitepapers"
+              >Whitepapers
+              <img
+                class="w-4.5 h-4.5 ml-1"
+                src="./images/arrow-up-right.svg"
+                alt=""
+                aria-hidden="true"
+            /></a>
+
+            <a
+              class="flex items-center text-[14px] 2xl:text-[18px] text-text-muted px-3.5 py-2 2xl:px-4 2xl:py-2.5 border border-surface w-fit rounded-md"
+              href="#whitepapers"
+              >Ebooks
+              <img
+                class="w-4.5 h-4.5 ml-1"
+                src="./images/arrow-up-right.svg"
+                alt=""
+                aria-hidden="true"
+            /></a>
+
+            <a
+              class="flex items-center text-[14px] 2xl:text-[18px] text-text-muted px-3.5 py-2 2xl:px-4 2xl:py-2.5 border border-surface w-fit rounded-md"
+              href="#whitepapers"
+              >Reports
+              <img
+                class="w-4.5 h-4.5 ml-1"
+                src="./images/arrow-up-right.svg"
+                alt=""
+                aria-hidden="true"
+            /></a>
+
+            <a
+              class="flex items-center text-[14px] 2xl:text-[18px] text-text-muted px-3.5 py-2 2xl:px-4 2xl:py-2.5 border border-surface w-fit rounded-md"
+              href="#whitepapers"
+              >Research Papers
+              <img
+                class="w-4.5 h-4.5 ml-1"
+                src="./images/arrow-up-right.svg"
+                alt=""
+                aria-hidden="true"
+            /></a>
+          </div>
+        </section>
+      </nav>
+
+      <hr class="mx-4 xl:mx-20 border-t border-surface 2xl:mx-40.5" />
+
+      <div
+        class="px-4 py-6 xl:px-20 xl:py-6 flex flex-col lg:flex-row justify-center lg:justify-between items-center gap-5 2xl:px-40.5 2xl:py-10"
+      >
+        <div class="flex flex-row gap-3.5 xl:order-2">
+          <i
+            class="fa-brands fa-twitter text-text-primary text-[20px] 2xl:text-[24px]"
+            aria-hidden="true"
+          ></i>
+          <img
+            src="./images/medium.svg"
+            alt=""
+            aria-hidden="true"
+            class="w-5 h-5 2xl:w-6 2xl:h-6"
+          />
+          <i
+            class="fa-brands fa-linkedin text-text-primary text-[20px] 2xl:text-[24px]"
+            aria-hidden="true"
+          ></i>
+        </div>
+
+        <p class="text-text-muted text-[14px] xl:order-1 2xl:text-[18px]">
+          Terms & Conditions | Privacy Policy
+        </p>
+
+        <p class="text-text-muted text-[14px] xl:order-3 2xl:text-[18px]">
+          © 2024 FutureTech. All rights reserved.
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
