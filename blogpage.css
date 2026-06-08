@@ -1,4 +1,4 @@
-/* ================= THIẾT LẬP CHUNG TOÀN TRANG ================= */
+/*  THIẾT LẬP CHUNG TOÀN TRANG  */
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +18,7 @@ a {
     transition: color 0.2s ease;
 }
 
-/* ================= HEADER STYLE ================= */
+/*  HEADER STYLE  */
 .header {
     display: flex;
     flex-direction: column;
