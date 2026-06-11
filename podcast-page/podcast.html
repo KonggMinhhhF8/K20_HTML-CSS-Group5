@@ -34,38 +34,38 @@
         for="menu-toggle"
         class="overlay fixed inset-0 z-[998] bg-black/60 cursor-pointer opacity-0 invisible transition-all duration-300 ease-in-out peer-checked:opacity-100 peer-checked:visible lg:hidden"
       ></label>
-      
-      <!-- header -->
-      <header class="fixed top-0 peer-checked:[&_.nav]:right-0 peer-checked:[&_.close]:block left-0 header w-full z-[1000] flex flex-col">
-        <a
-          href="#!"
-          class="top-banner bg-[#141414] flex justify-center items-center pt-10 px-6 pb-3.5 gap-2.5 lg:py-3 lg:px-6 2xl:px-6 2xl:py-5"
+      <a
+        href="#!"
+        class="top-banner block bg-[#141414] flex justify-center items-center pt-10 px-6 pb-3.5 gap-2.5 lg:py-3 lg:px-6 2xl:px-6 2xl:py-5"
+      >
+        <p
+          class="top-banner__text text-[#98989A] text-xs font-['Inter'] font-normal leading-[150%] tracking-[-0.03em] lg:text-sm lg:py-3 lg:px-6 2xl:text-lg"
         >
-          <p
-            class="top-banner__text text-[#98989A] text-xs font-['Inter'] font-normal leading-[150%] tracking-[-0.03em] lg:text-sm lg:py-3 lg:px-6 2xl:text-lg"
-          >
-            Subscribe to our Newsletter For Blogs and Resources
-          </p>
+          Subscribe to our Newsletter For Blogs and Resources
+        </p>
 
-          <span class="icon inline-block flex">
-            <img
-              class="w-5 h-5 2xl:w-6 2xl:h-6"
-              src="./img/Icon.svg"
-              alt="icon"
-            />
-          </span>
-        </a>
-
+        <span class="icon inline-block flex">
+          <img
+            class="w-5 h-5 2xl:w-6 2xl:h-6"
+            src="./img/Icon.svg"
+            alt="icon"
+          />
+        </span>
+      </a>
+      <!-- header -->
+      <header
+        class="sticky top-0 left-0 z-[1000] peer-checked:[&_.nav]:right-0 peer-checked:[&_.close]:block header w-full"
+      >
         <div
           class="navbar px-4 py-5 bg-[#1A1A1A] border-y border-[#262626] flex justify-between items-center lg:px-20 lg:py-5 lg:border-b lg:border-t-0 2xl:px-40.5 2xl:py-6 2xl:border-b 2xl:border-t-0"
         >
-          <div class="logo flex items-center">
+          <a href="#!" class="logo inline-block flex items-center">
             <img
               class="w-[125.23px] h-8.75 lg:w-[143.12px] lg:h-[40px] 2xl:w-[178.91px] 2xl:h-[50px]"
               src="./img/logo_podcast.svg"
               alt="logo"
             />
-          </div>
+          </a>
           <!-- nav -->
           <nav
             class="nav fixed top-0 -right-75 z-[1000] pt-26 px-5 lg:pt-0 lg:px-0 w-75 h-screen border-l border-[#262626] lg:border-l-0 bg-[#1A1A1A] border-[#262626] lg:border-l-0 transition-all duration-300 ease-in-out lg:block lg:static lg:w-auto lg:h-auto lg:bg-transparent 2xl:block 2xl:static"
@@ -75,7 +75,7 @@
             >
               <li class="">
                 <a
-                  class="block transition-all duration-300 ease hover:bg-[#141414] hover:rounded-[10px] hover:scale-110 px-2 py-4 lg:px-0 lg:py-0 lg:border-b-0 border-b border-[#262626] font-['Inter'] font-medium tracking-0 lg:py-2.5 lg:px-4.5 lg:text-sm lg:hover:bg-[#141414] lg:hover:border lg:hover:border-[#333333] lg:hover:rounded-lg 2xl:text 2xl:py-3.5 2xl:px-6"
+                  class="block transition-all duration-300 ease hover:bg-[#141414] hover:rounded-[10px] hover:scale-110 px-2 py-4 lg:px-0 lg:py-0 lg:border-b-0 border-b border-[#262626] font-['Inter'] font-medium tracking-0 lg:py-2.5 lg:px-4.5 lg:text-sm lg:hover:bg-[#141414] lg:hover:border lg:hover:border-[#333333] lg:hover:rounded-lg 2xl:text-lg 2xl:py-3.5 2xl:px-6"
                   href="#!"
                 >
                   Home
@@ -84,7 +84,7 @@
 
               <li class="">
                 <a
-                  class="block transition-all duration-300 ease hover:bg-[#141414] hover:rounded-[10px] hover:scale-110 px-2 py-4 lg:px-0 lg:py-0 lg:border-b-0 border-b border-[#262626] font-['Inter'] font-medium tracking-0 lg:py-2.5 lg:px-4.5 lg:text-sm lg:hover:bg-[#141414] lg:hover:border lg:hover:border-[#333333] lg:hover:rounded-lg 2xl:text 2xl:py-3.5 2xl:px-6"
+                  class="block transition-all duration-300 ease hover:bg-[#141414] hover:rounded-[10px] hover:scale-110 px-2 py-4 lg:px-0 lg:py-0 lg:border-b-0 border-b border-[#262626] font-['Inter'] font-medium tracking-0 lg:py-2.5 lg:px-4.5 lg:text-sm lg:hover:bg-[#141414] lg:hover:border lg:hover:border-[#333333] lg:hover:rounded-lg 2xl:text-lg 2xl:py-3.5 2xl:px-6"
                   href="#!"
                 >
                   News
@@ -93,7 +93,7 @@
 
               <li class="">
                 <a
-                  class="block transition-all duration-300 ease hover:bg-[#141414] hover:rounded-[10px] hover:scale-110 px-2 py-4 lg:px-0 lg:py-0 lg:border-b-0 border-b border-[#262626] font-['Inter'] font-medium tracking-0 lg:py-2.5 lg:px-4.5 lg:text-sm lg:hover:bg-[#141414] lg:hover:border lg:hover:border-[#333333] lg:hover:rounded-lg 2xl:text 2xl:py-3.5 2xl:px-6"
+                  class="block transition-all duration-300 ease hover:bg-[#141414] hover:rounded-[10px] hover:scale-110 px-2 py-4 lg:px-0 lg:py-0 lg:border-b-0 border-b border-[#262626] font-['Inter'] font-medium tracking-0 lg:py-2.5 lg:px-4.5 lg:text-sm lg:hover:bg-[#141414] lg:hover:border lg:hover:border-[#333333] lg:hover:rounded-lg 2xl:text-lg 2xl:py-3.5 2xl:px-6"
                   href="#!"
                 >
                   Podcasts
@@ -102,7 +102,7 @@
 
               <li class="">
                 <a
-                  class="block transition-all duration-300 ease hover:bg-[#141414] hover:rounded-[10px] hover:scale-110 px-2 py-4 lg:px-0 lg:py-0 lg:border-b-0 border-b border-[#262626] font-['Inter'] font-medium tracking-0 lg:py-2.5 lg:px-4.5 lg:text-sm lg:hover:bg-[#141414] lg:hover:border lg:hover:border-[#333333] lg:hover:rounded-lg 2xl:text 2xl:py-3.5 2xl:px-6"
+                  class="block transition-all duration-300 ease hover:bg-[#141414] hover:rounded-[10px] hover:scale-110 px-2 py-4 lg:px-0 lg:py-0 lg:border-b-0 border-b border-[#262626] font-['Inter'] font-medium tracking-0 lg:py-2.5 lg:px-4.5 lg:text-sm lg:hover:bg-[#141414] lg:hover:border lg:hover:border-[#333333] lg:hover:rounded-lg 2xl:text-lg 2xl:py-3.5 2xl:px-6"
                   href="#!"
                 >
                   Resources
@@ -141,7 +141,7 @@
       <main>
         <!-- hero section -->
         <section
-          class="hero-section mt-47.25 lg:mt-51.5 2xl:mt-75 mb-10 mx-4 lg:mt-20 lg:mx-20 lg:mb-25 2xl:my-32.5 2xl:mx-40.5"
+          class="hero-section mt-30 lg:mt-40 2xl:mt-60 mb-10 mx-4 lg:mx-20 lg:mb-25 2xl:my-32.5 2xl:mx-40.5"
         >
           <div
             class="container hero-flex flex flex-col gap-y-3.5 lg:grid lg:grid-cols-12 lg:gap-x-15 lg:gap-y-5 lg:items-center 2xl:gap-x-20"
@@ -608,7 +608,9 @@
                   </p>
                 </div>
               </div>
-              <div class="flex flex-col gap-1.5 lg:gap-2.5 lg:flex-1 2xl:gap-3.5">
+              <div
+                class="flex flex-col gap-1.5 lg:gap-2.5 lg:flex-1 2xl:gap-3.5"
+              >
                 <h4
                   class="font-semibold text-base leading-[1.5] lg:text-lg 2xl:text-[22px] leading-[1.5] tracking-[-0.03em]"
                 >
@@ -666,7 +668,9 @@
                   </p>
                 </div>
               </div>
-              <div class="flex flex-col gap-1.5 lg:gap-2.5 lg:flex-1 2xl:gap-3.5">
+              <div
+                class="flex flex-col gap-1.5 lg:gap-2.5 lg:flex-1 2xl:gap-3.5"
+              >
                 <h4
                   class="font-semibold text-base leading-[1.5] lg:text-lg 2xl:text-[22px] leading-[1.5] tracking-[-0.03em]"
                 >
@@ -724,7 +728,9 @@
                   </p>
                 </div>
               </div>
-              <div class="flex flex-col gap-1.5 lg:gap-2.5 lg:flex-1 2xl:gap-3.5">
+              <div
+                class="flex flex-col gap-1.5 lg:gap-2.5 lg:flex-1 2xl:gap-3.5"
+              >
                 <h4
                   class="font-semibold text-base leading-[1.5] lg:text-lg 2xl:text-[22px] leading-[1.5] tracking-[-0.03em]"
                 >
@@ -787,7 +793,9 @@
                   </p>
                 </div>
               </div>
-              <div class="flex flex-col gap-1.5 lg:gap-2.5 lg:flex-1 2xl:gap-3.5">
+              <div
+                class="flex flex-col gap-1.5 lg:gap-2.5 lg:flex-1 2xl:gap-3.5"
+              >
                 <h4
                   class="font-semibold text-base leading-[1.5] lg:text-lg 2xl:text-[22px] leading-[1.5] tracking-[-0.03em]"
                 >
@@ -845,7 +853,9 @@
                   </p>
                 </div>
               </div>
-              <div class="flex flex-col gap-1.5 lg:gap-2.5 lg:flex-1 2xl:gap-3.5">
+              <div
+                class="flex flex-col gap-1.5 lg:gap-2.5 lg:flex-1 2xl:gap-3.5"
+              >
                 <h4
                   class="font-semibold text-base leading-[1.5] lg:text-lg 2xl:text-[22px] leading-[1.5] tracking-[-0.03em]"
                 >
@@ -903,7 +913,9 @@
                   </p>
                 </div>
               </div>
-              <div class="flex flex-col gap-1.5 lg:gap-2.5 lg:flex-1 2xl:gap-3.5">
+              <div
+                class="flex flex-col gap-1.5 lg:gap-2.5 lg:flex-1 2xl:gap-3.5"
+              >
                 <h4
                   class="font-semibold text-base leading-[1.5] lg:text-lg 2xl:text-[22px]"
                 >
