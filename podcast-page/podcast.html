@@ -34,24 +34,26 @@
         for="menu-toggle"
         class="overlay fixed inset-0 z-[998] bg-black/60 cursor-pointer opacity-0 invisible transition-all duration-300 ease-in-out peer-checked:opacity-100 peer-checked:visible lg:hidden"
       ></label>
-      <a
-        href="#!"
-        class="top-banner block bg-[#141414] flex justify-center items-center pt-10 px-6 pb-3.5 gap-2.5 lg:py-3 lg:px-6 2xl:px-6 2xl:py-5"
-      >
-        <p
-          class="top-banner__text text-[#98989A] text-xs font-['Inter'] font-normal leading-[150%] tracking-[-0.03em] lg:text-sm lg:py-3 lg:px-6 2xl:text-lg"
+      <div>
+        <a
+          href="#!"
+          class="top-banner block bg-[#141414] flex justify-center items-center pt-10 px-6 pb-3.5 gap-2.5 lg:py-3 lg:px-6 2xl:px-6 2xl:py-5"
         >
-          Subscribe to our Newsletter For Blogs and Resources
-        </p>
+          <p
+            class="top-banner__text text-[#98989A] text-xs font-['Inter'] font-normal leading-[150%] tracking-[-0.03em] lg:text-sm lg:py-3 lg:px-6 2xl:text-lg"
+          >
+            Subscribe to our Newsletter For Blogs and Resources
+          </p>
 
-        <span class="icon inline-block flex">
-          <img
-            class="w-5 h-5 2xl:w-6 2xl:h-6"
-            src="./img/Icon.svg"
-            alt="icon"
-          />
-        </span>
-      </a>
+          <span class="icon inline-block flex">
+            <img
+              class="w-5 h-5 2xl:w-6 2xl:h-6"
+              src="./img/Icon.svg"
+              alt="icon"
+            />
+          </span>
+        </a>
+      </div>
       <!-- header -->
       <header
         class="sticky top-0 left-0 z-[1000] peer-checked:[&_.nav]:right-0 peer-checked:[&_.close]:block header w-full"
@@ -120,14 +122,12 @@
           </nav>
 
           <div class="header__active">
-            <button class="button-contact hidden lg:block">
-              <a
-                href="#!"
-                class="inline-block font-['Inter'] text-[#141414] font-medium lg:text-sm leading-[1.5] tracking-[0] whitespace-nowrap :transition-scale :duration-300 :ease hover:scale-110 bg-[#FFD11A] lg:py-2.5 lg:px-3.5 lg:rounded-md 2xl:text 2xl:py-3.5 2xl:px-5"
-              >
-                Contact Us
-              </a>
-            </button>
+            <a
+              href="#!"
+              class="hidden lg:inline-block font-sans text-[#141414] font-medium lg:text-sm leading-normal tracking-normal whitespace-nowrap transition-transform duration-300 ease-in-out hover:scale-110 bg-[#FFD11A] lg:py-2.5 lg:px-3.5 lg:rounded-md 2xl:text-base 2xl:py-3.5 2xl:px-5"
+            >
+              Contact Us
+            </a>
 
             <label
               for="menu-toggle"
