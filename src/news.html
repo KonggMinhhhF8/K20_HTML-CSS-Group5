@@ -32,6 +32,12 @@
     </aside>
     <!-- Menu -->
     <header class="sticky top-0 z-50">
+      <input
+        type="checkbox"
+        id="mobile-menu-toggle"
+        class="peer fixed top-0 right-0 h-0 w-0 opacity-0 pointer-events-none"
+        aria-label="Toggle mobile menu"
+      />
       <div
         class="flex items-center justify-between px-4 py-5 xl:px-20 xl:py-5 2xl:px-40.5 2xl:py-6 bg-bg-secondary border border-t-surface border-b-surface border-l-0 border-r-0"
       >
@@ -59,29 +65,28 @@
             <li>
               <a
                 href="#"
-                class="px-6 py-3.5 text-text-muted border border-transparent hover:bg-bg-primary hover:border-stroke rounded-[14px] transition-colors"
+                class="inline-block origin-center px-6 py-3.5 text-text-muted border border-transparent hover:bg-bg-primary hover:border-stroke hover:text-white hover:scale-110 rounded-[14px] transition-all"
                 >Home</a
               >
             </li>
             <li>
               <a
                 href="#"
-                aria-current="page"
-                class="px-6 py-3.5 bg-bg-primary border border-stroke rounded-[14px] transition-colors"
+                class="inline-block origin-center px-6 py-3.5 text-text-muted border border-transparent hover:bg-bg-primary hover:border-stroke hover:text-white hover:scale-110 rounded-[14px] transition-all"
                 >News</a
               >
             </li>
             <li>
               <a
                 href="#"
-                class="px-6 py-3.5 text-text-muted border border-transparent hover:bg-bg-primary hover:border-stroke rounded-[14px] transition-colors"
+                class="inline-block origin-center px-6 py-3.5 text-text-muted border border-transparent hover:bg-bg-primary hover:border-stroke hover:text-white hover:scale-110 rounded-[14px] transition-all"
                 >Podcasts</a
               >
             </li>
             <li>
               <a
                 href="#"
-                class="px-6 py-3.5 text-text-muted border border-transparent hover:bg-bg-primary hover:border-stroke rounded-[14px] transition-colors"
+                class="inline-block origin-center px-6 py-3.5 text-text-muted border border-transparent hover:bg-bg-primary hover:border-stroke hover:text-white hover:scale-110 rounded-[14px] transition-all"
                 >Resources</a
               >
             </li>
@@ -93,10 +98,78 @@
           class="bg-accent px-3.5 py-2.5 2xl:px-5 2xl:py-3.5 rounded-[10px] hidden lg:block 2xl:text-[18px]"
           >Contact Us</a
         >
-        <button type="button" class="lg:hidden" aria-label="Open menu">
+        <label
+          for="mobile-menu-toggle"
+          class="lg:hidden cursor-pointer"
+          aria-label="Open menu"
+        >
           <img src="./images/menu-mobile.svg" alt="" aria-hidden="true" />
-        </button>
+        </label>
       </div>
+      <label
+        for="mobile-menu-toggle"
+        class="fixed inset-0 z-40 bg-black/60 opacity-0 pointer-events-none transition-opacity duration-300 peer-checked:opacity-100 peer-checked:pointer-events-auto lg:hidden"
+        aria-label="Close mobile menu overlay"
+      ></label>
+      <nav
+        class="fixed top-0 right-0 z-50 h-screen w-[280px] max-w-[85vw] translate-x-full border-l border-surface bg-bg-secondary px-5 py-6 shadow-2xl transition-transform duration-300 peer-checked:translate-x-0 lg:hidden"
+        aria-label="Mobile navigation"
+      >
+        <div class="mb-8 flex items-center justify-end">
+          <!-- <a href="#home" class="flex items-center text-text-primary">
+            <img
+              src="./images/logo.png"
+              alt=""
+              aria-hidden="true"
+              class="h-8.75 w-8.75"
+            />
+            <span class="ml-2.5 text-lg font-bold">FutureTech</span>
+          </a> -->
+          <label
+            for="mobile-menu-toggle"
+            class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-surface text-2xl leading-none text-text-primary hover:border-white hover:text-white transition-colors"
+            aria-label="Close menu"
+            >×</label
+          >
+        </div>
+        <ul class="flex flex-col gap-3 text-[16px] text-text-muted">
+          <li>
+            <a
+              href="#"
+              class="block rounded-lg border border-transparent px-4 py-3 hover:border-stroke hover:bg-bg-primary hover:text-white transition-all"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="block rounded-lg border border-transparent px-4 py-3 hover:border-stroke hover:bg-bg-primary hover:text-white transition-all"
+              >News</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="block rounded-lg border border-transparent px-4 py-3 hover:border-stroke hover:bg-bg-primary hover:text-white transition-all"
+              >Podcasts</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="block rounded-lg border border-transparent px-4 py-3 hover:border-stroke hover:bg-bg-primary hover:text-white transition-all"
+              >Resources</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="mt-3 block rounded-lg bg-accent px-4 py-3 text-center font-medium text-bg-primary"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+      </nav>
     </header>
     <main>
       <section
@@ -208,7 +281,7 @@
             </div>
             <a
               href="#learn-more"
-              class="text-text-muted border border-surface px-5 py-3.5 xl:px-5 xl:py-3.5 2xl:px-6 2xl:py-4.5 rounded-xl text-[14px] 2xl:text-[18px]"
+              class="text-text-muted border border-surface px-5 py-3.5 xl:px-5 xl:py-3.5 2xl:px-6 2xl:py-4.5 rounded-xl text-[14px] 2xl:text-[18px] hover:border-white hover:text-white transition-colors"
               >Read More</a
             >
           </div>
@@ -279,7 +352,7 @@
             <a
               href="#read-more"
               aria-label="Read more about A Decisive Victory for Progressive Policies"
-              class="text-text-muted border border-surface px-5 py-3.5 md:px-5 lg:px-12.5 lg:py-3.5 xl:px-8 xl:py-3.5 2xl:px-9 rounded-xl flex items-center text-[14px] 2xl:text-[18px]"
+              class="text-text-muted border border-surface px-5 py-3.5 md:px-5 lg:px-12.5 lg:py-3.5 xl:px-8 xl:py-3.5 2xl:px-9 rounded-xl flex items-center text-[14px] 2xl:text-[18px] hover:border-white hover:text-white transition-colors"
               >Read More
               <img
                 src="./images/arrow-up-right.svg"
@@ -351,7 +424,7 @@
             <a
               href="#read-more"
               aria-label="Read more about Tech Giants Unveil Cutting-Edge AI Innovations"
-              class="text-text-muted border border-surface px-5 py-3.5 md:px-5 lg:px-12.5 lg:py-3.5 xl:px-8 xl:py-3.5 2xl:px-9 rounded-xl flex items-center text-[14px] 2xl:text-[18px]"
+              class="text-text-muted border border-surface px-5 py-3.5 md:px-5 lg:px-12.5 lg:py-3.5 xl:px-8 xl:py-3.5 2xl:px-9 rounded-xl flex items-center text-[14px] 2xl:text-[18px] hover:border-white hover:text-white transition-colors"
               >Read More
               <img
                 src="./images/arrow-up-right.svg"
@@ -421,7 +494,7 @@
             <a
               href="#read-more"
               aria-label="Read more about COVID-19 Variants"
-              class="text-text-muted border border-surface px-5 py-3.5 md:px-5 lg:px-12.5 lg:py-3.5 xl:px-8 xl:py-3.5 2xl:px-9 rounded-xl flex items-center text-[14px] 2xl:text-[18px]"
+              class="text-text-muted border border-surface px-5 py-3.5 md:px-5 lg:px-12.5 lg:py-3.5 xl:px-8 xl:py-3.5 2xl:px-9 rounded-xl flex items-center text-[14px] 2xl:text-[18px] hover:border-white hover:text-white transition-colors"
               >Read More
               <img
                 src="./images/arrow-up-right.svg"
@@ -453,7 +526,7 @@
         </div>
         <a
           href="#read-more"
-          class="text-text-muted border border-surface text-[14px] px-5 py-3.5 mt-7.5 md:px-[77.5px] md:py-4.5 xl:px-5 xl:py-3.5 xl:mt-0 xl:w-fit xl:h-fit 2xl:text-[18px] 2xl:px-6 2xl:py-4.5 rounded-xl flex items-center justify-center bg-bg-primary"
+          class="text-text-muted border border-surface text-[14px] px-5 py-3.5 mt-7.5 md:px-[77.5px] md:py-4.5 xl:px-5 xl:py-3.5 xl:mt-0 xl:w-fit xl:h-fit 2xl:text-[18px] 2xl:px-6 2xl:py-4.5 rounded-xl flex items-center justify-center bg-bg-primary hover:border-white hover:text-white transition-colors"
           >View All News
           <img
             src="./images/arrow-up-right.svg"
@@ -469,7 +542,7 @@
         class="px-4 py-5 xl:px-20 xl:py-10 2xl:px-40.5 2xl:py-12.5"
       >
         <div
-          class="flex overflow-x-auto scrollbar-hide gap-4 whitespace-nowrap text-[14px] 2xl:text-[18px]"
+          class="flex overflow-x-auto gap-4 whitespace-nowrap scrollbar-hide text-[14px] 2xl:text-[18px]"
         >
           <button
             type="button"
@@ -547,7 +620,7 @@
 
           <a
             href="#"
-            class="self-center flex items-center gap-1 w-fit h-fit rounded-xl border border-surface px-5 py-3.5 text-text-muted text-[14px] 2xl:text-[18px] 2xl:px-6 2xl:py-4.5 xl:order-3"
+            class="self-center flex items-center gap-1 w-fit h-fit rounded-xl border border-surface px-5 py-3.5 text-text-muted text-[14px] 2xl:text-[18px] 2xl:px-6 2xl:py-4.5 xl:order-3 hover:border-white hover:text-white transition-colors"
             aria-label="Read more about Tech Giants Announce New Product Line"
           >
             Read More
@@ -641,7 +714,7 @@
 
           <a
             href="#"
-            class="self-center flex items-center gap-1 w-fit h-fit rounded-xl border border-surface px-5 py-3.5 text-text-muted text-[14px] 2xl:text-[18px] 2xl:px-6 2xl:py-4.5 xl:order-3"
+            class="self-center flex items-center gap-1 w-fit h-fit rounded-xl border border-surface px-5 py-3.5 text-text-muted text-[14px] 2xl:text-[18px] 2xl:px-6 2xl:py-4.5 xl:order-3 hover:border-white hover:text-white transition-colors"
             aria-label="Read more about The Future of Autonomous Vehicles"
           >
             Read More
@@ -735,7 +808,7 @@
 
           <a
             href="#"
-            class="self-center flex items-center gap-1 w-fit h-fit rounded-xl border border-surface px-5 py-3.5 text-text-muted text-[14px] 2xl:text-[18px] 2xl:px-6 2xl:py-4.5 xl:order-3"
+            class="self-center flex items-center gap-1 w-fit h-fit rounded-xl border border-surface px-5 py-3.5 text-text-muted text-[14px] 2xl:text-[18px] 2xl:px-6 2xl:py-4.5 xl:order-3 hover:border-white hover:text-white transition-colors"
             aria-label="Read more about Tech Startups Secure Record Funding"
           >
             Read More
@@ -823,7 +896,7 @@
         </div>
         <a
           href="#read-more"
-          class="text-text-muted border border-surface px-5 py-3.5 md:px-[77.5px] md:py-4.5 xl:px-5 xl:py-3.5 xl:w-fit xl:h-fit xl:text-[14px] 2xl:text-[18px] 2xl:px-6 2xl:py-4.5 rounded-xl flex items-center justify-center bg-bg-primary"
+          class="text-text-muted border border-surface px-5 py-3.5 md:px-[77.5px] md:py-4.5 xl:px-5 xl:py-3.5 xl:w-fit xl:h-fit xl:text-[14px] 2xl:text-[18px] 2xl:px-6 2xl:py-4.5 rounded-xl flex items-center justify-center bg-bg-primary hover:border-white hover:text-white transition-colors"
           >View All
           <img
             src="./images/arrow-up-right.svg"
@@ -1165,10 +1238,26 @@
           <ul
             class="text-text-muted text-[14px] 2xl:text-[18px] flex flex-col gap-2 xl:gap-3 2xl:gap-4.5"
           >
-            <li><a href="#link">Features</a></li>
-            <li><a href="#link">Blogs</a></li>
             <li>
-              <a href="#link">Resources</a>
+              <a
+                href="#link"
+                class="inline-block origin-left transition-transform hover:scale-110 hover:text-white"
+                >Features</a
+              >
+            </li>
+            <li>
+              <a
+                href="#link"
+                class="inline-block origin-left transition-transform hover:scale-110 hover:text-white"
+                >Blogs</a
+              >
+            </li>
+            <li>
+              <a
+                href="#link"
+                class="inline-block origin-left transition-transform hover:scale-110 hover:text-white"
+                >Resources</a
+              >
               <span
                 class="inline-flex ml-2 rounded-lg bg-[radial-gradient(circle_at_100%_0%,#FFD119_0%,#FFD119_6%,#6b5b1a_18%,#262626_42%,#262626_100%)] p-px"
               >
@@ -1179,9 +1268,27 @@
                 </span>
               </span>
             </li>
-            <li><a href="#link">Testimonials</a></li>
-            <li><a href="#link">Contact Us</a></li>
-            <li><a href="#link">Newsletter</a></li>
+            <li>
+              <a
+                href="#link"
+                class="inline-block origin-left transition-transform hover:scale-110 hover:text-white"
+                >Testimonials</a
+              >
+            </li>
+            <li>
+              <a
+                href="#link"
+                class="inline-block origin-left transition-transform hover:scale-110 hover:text-white"
+                >Contact Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="#link"
+                class="inline-block origin-left transition-transform hover:scale-110 hover:text-white"
+                >Newsletter</a
+              >
+            </li>
           </ul>
         </section>
         <section class="order-2 flex flex-col gap-4 2xl:gap-8">
@@ -1191,12 +1298,48 @@
           <ul
             class="text-text-muted text-[14px] 2xl:text-[18px] flex flex-col gap-2 xl:gap-3 2xl:gap-4.5"
           >
-            <li><a href="#link">Trending Stories</a></li>
-            <li><a href="#link">Featured Videos</a></li>
-            <li><a href="#link">Technology</a></li>
-            <li><a href="#link">Health</a></li>
-            <li><a href="#link">Politics</a></li>
-            <li><a href="#link">Environment</a></li>
+            <li>
+              <a
+                href="#link"
+                class="inline-block origin-left transition-transform hover:scale-110 hover:text-white"
+                >Trending Stories</a
+              >
+            </li>
+            <li>
+              <a
+                href="#link"
+                class="inline-block origin-left transition-transform hover:scale-110 hover:text-white"
+                >Featured Videos</a
+              >
+            </li>
+            <li>
+              <a
+                href="#link"
+                class="inline-block origin-left transition-transform hover:scale-110 hover:text-white"
+                >Technology</a
+              >
+            </li>
+            <li>
+              <a
+                href="#link"
+                class="inline-block origin-left transition-transform hover:scale-110 hover:text-white"
+                >Health</a
+              >
+            </li>
+            <li>
+              <a
+                href="#link"
+                class="inline-block origin-left transition-transform hover:scale-110 hover:text-white"
+                >Politics</a
+              >
+            </li>
+            <li>
+              <a
+                href="#link"
+                class="inline-block origin-left transition-transform hover:scale-110 hover:text-white"
+                >Environment</a
+              >
+            </li>
           </ul>
         </section>
         <section class="order-4 md:order-3 flex flex-col gap-4 2xl:gap-8">
@@ -1206,11 +1349,33 @@
           <ul
             class="text-text-muted text-[14px] 2xl:text-[18px] flex flex-col gap-2 xl:gap-3 2xl:gap-4.5"
           >
-            <li><a href="#link">Quantum Computing</a></li>
-            <li><a href="#link">AI Ethics</a></li>
-            <li><a href="#link">Space Exploration</a></li>
             <li>
-              <a href="#link">Biotechnology</a>
+              <a
+                href="#link"
+                class="inline-block origin-left transition-transform hover:scale-110 hover:text-white"
+                >Quantum Computing</a
+              >
+            </li>
+            <li>
+              <a
+                href="#link"
+                class="inline-block origin-left transition-transform hover:scale-110 hover:text-white"
+                >AI Ethics</a
+              >
+            </li>
+            <li>
+              <a
+                href="#link"
+                class="inline-block origin-left transition-transform hover:scale-110 hover:text-white"
+                >Space Exploration</a
+              >
+            </li>
+            <li>
+              <a
+                href="#link"
+                class="inline-block origin-left transition-transform hover:scale-110 hover:text-white"
+                >Biotechnology</a
+              >
               <span
                 class="inline-flex ml-2 rounded-lg bg-[radial-gradient(circle_at_100%_0%,#FFD119_0%,#FFD119_6%,#6b5b1a_18%,#262626_42%,#262626_100%)] p-px"
               >
@@ -1221,8 +1386,20 @@
                 </span>
               </span>
             </li>
-            <li><a href="#link">Renewable Energy</a></li>
-            <li><a href="#link">Biohacking</a></li>
+            <li>
+              <a
+                href="#link"
+                class="inline-block origin-left transition-transform hover:scale-110 hover:text-white"
+                >Renewable Energy</a
+              >
+            </li>
+            <li>
+              <a
+                href="#link"
+                class="inline-block origin-left transition-transform hover:scale-110 hover:text-white"
+                >Biohacking</a
+              >
+            </li>
           </ul>
         </section>
         <section class="order-3 md:order-4 flex flex-col gap-4 2xl:gap-8">
@@ -1232,9 +1409,19 @@
           <ul
             class="text-text-muted text-[14px] 2xl:text-[18px] flex flex-col gap-2 xl:gap-3 2xl:gap-4.5"
           >
-            <li><a href="#link">AI Revolution</a></li>
             <li>
-              <a href="#link">AI Revolution</a>
+              <a
+                href="#link"
+                class="inline-block origin-left transition-transform hover:scale-110 hover:text-white"
+                >AI Revolution</a
+              >
+            </li>
+            <li>
+              <a
+                href="#link"
+                class="inline-block origin-left transition-transform hover:scale-110 hover:text-white"
+                >AI Revolution</a
+              >
               <span
                 class="inline-flex ml-2 rounded-lg bg-[radial-gradient(circle_at_100%_0%,#FFD119_0%,#FFD119_6%,#6b5b1a_18%,#262626_42%,#262626_100%)] p-px"
               >
@@ -1245,8 +1432,20 @@
                 </span>
               </span>
             </li>
-            <li><a href="#link">TechTalk AI</a></li>
-            <li><a href="#link">AI Conversations</a></li>
+            <li>
+              <a
+                href="#link"
+                class="inline-block origin-left transition-transform hover:scale-110 hover:text-white"
+                >TechTalk AI</a
+              >
+            </li>
+            <li>
+              <a
+                href="#link"
+                class="inline-block origin-left transition-transform hover:scale-110 hover:text-white"
+                >AI Conversations</a
+              >
+            </li>
           </ul>
         </section>
         <section
@@ -1257,7 +1456,7 @@
           </h3>
           <div class="flex flex-wrap gap-3 lg:flex-col 2xl:gap-4.5">
             <a
-              class="flex items-center text-[14px] 2xl:text-[18px] text-text-muted px-3.5 py-2 2xl:px-4 2xl:py-2.5 border border-surface w-fit rounded-md"
+              class="flex items-center text-[14px] 2xl:text-[18px] text-text-muted px-3.5 py-2 2xl:px-4 2xl:py-2.5 border border-surface w-fit rounded-md origin-left transition-transform hover:scale-110 hover:text-white"
               href="#whitepapers"
               >Whitepapers
               <img
@@ -1268,7 +1467,7 @@
             /></a>
 
             <a
-              class="flex items-center text-[14px] 2xl:text-[18px] text-text-muted px-3.5 py-2 2xl:px-4 2xl:py-2.5 border border-surface w-fit rounded-md"
+              class="flex items-center text-[14px] 2xl:text-[18px] text-text-muted px-3.5 py-2 2xl:px-4 2xl:py-2.5 border border-surface w-fit rounded-md origin-left transition-transform hover:scale-110 hover:text-white"
               href="#whitepapers"
               >Ebooks
               <img
@@ -1279,7 +1478,7 @@
             /></a>
 
             <a
-              class="flex items-center text-[14px] 2xl:text-[18px] text-text-muted px-3.5 py-2 2xl:px-4 2xl:py-2.5 border border-surface w-fit rounded-md"
+              class="flex items-center text-[14px] 2xl:text-[18px] text-text-muted px-3.5 py-2 2xl:px-4 2xl:py-2.5 border border-surface w-fit rounded-md origin-left transition-transform hover:scale-110 hover:text-white"
               href="#whitepapers"
               >Reports
               <img
@@ -1290,7 +1489,7 @@
             /></a>
 
             <a
-              class="flex items-center text-[14px] 2xl:text-[18px] text-text-muted px-3.5 py-2 2xl:px-4 2xl:py-2.5 border border-surface w-fit rounded-md"
+              class="flex items-center text-[14px] 2xl:text-[18px] text-text-muted px-3.5 py-2 2xl:px-4 2xl:py-2.5 border border-surface w-fit rounded-md origin-left transition-transform hover:scale-110 hover:text-white"
               href="#whitepapers"
               >Research Papers
               <img
@@ -1308,7 +1507,7 @@
       <div
         class="px-4 py-6 xl:px-20 xl:py-6 flex flex-col lg:flex-row justify-center lg:justify-between items-center gap-5 2xl:px-40.5 2xl:py-10"
       >
-        <div class="flex flex-row gap-3.5 xl:order-2">
+        <div class="flex flex-row gap-3.5 lg:order-2">
           <i
             class="fa-brands fa-twitter text-text-primary text-[20px] 2xl:text-[24px]"
             aria-hidden="true"
@@ -1325,11 +1524,11 @@
           ></i>
         </div>
 
-        <p class="text-text-muted text-[14px] xl:order-1 2xl:text-[18px]">
+        <p class="text-text-muted text-[14px] lg:order-1 2xl:text-[18px]">
           Terms & Conditions | Privacy Policy
         </p>
 
-        <p class="text-text-muted text-[14px] xl:order-3 2xl:text-[18px]">
+        <p class="text-text-muted text-[14px] lg:order-3 2xl:text-[18px]">
           © 2024 FutureTech. All rights reserved.
         </p>
       </div>
